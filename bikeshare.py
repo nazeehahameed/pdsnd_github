@@ -189,9 +189,9 @@ def user_stats(df):
 def show_raw_data(df):
     """
     Asks if the user would like to see some lines of data from the filtered dataset.
-    Displays 5 rows, then prompts if they would like to see 5 more and so on.
+    Displays 10 rows, then prompts if they would like to see next 10 more and so on.
     """
-    show_rows = 5
+    show_rows = 10
     rows_start = 0
     rows_end = show_rows - 1
 
