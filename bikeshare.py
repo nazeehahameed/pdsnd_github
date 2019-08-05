@@ -10,13 +10,13 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+    It Returns:
+        (str) city - name of the city to analyze.
+        (str) month - name of the month to filter by, or "all" to apply no month filter.
+        (str) day - name of the day of week to filter by, or "all" to apply no day filter.
     """
 
-    print('\nHello! Let\'s explore some US bikeshare data!')
+    print('\nHello.. Welcome! Let\'s Explore Some US Bikeshare Data!')
     #Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
       city = input("\nWhich city would you like to filter by? New York City, Chicago or Washington?\n").lower()
@@ -43,8 +43,8 @@ def get_filters():
         continue
       else:
         break
-    
-       
+
+
 
     print('-'*40)
     return city, month, day
@@ -53,7 +53,7 @@ def get_filters():
 def load_data(city, month, day):
 
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    This Loads data for the specified city and filters by month and day if applicable.
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -71,9 +71,9 @@ def load_data(city, month, day):
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-   
+
         df = df[df['month'] == month]
-        
+
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
 
@@ -193,7 +193,7 @@ def show_raw_data(df):
     """
     show_rows = 5
     rows_start = 0
-    rows_end = show_rows - 1    
+    rows_end = show_rows - 1
 
     print('\n    Would you like to see some raw data from the filtered dataset?')
     while True:
@@ -229,4 +229,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
