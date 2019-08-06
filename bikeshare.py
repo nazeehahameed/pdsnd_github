@@ -21,7 +21,7 @@ def get_filters():
     while True:
       city = input("\nWhich city would you like to filter by? New York City, Chicago or Washington?\n").lower()
       if city not in ('new york city', 'chicago', 'washington'):
-        print("Sorry, Invalid! Try again.")
+        print("Sorry, Wrong Choice!! Try again.")
         continue
       else:
         break
@@ -30,7 +30,7 @@ def get_filters():
     while True:
       month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' for all\n").lower()
       if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
-        print("Sorry, Invalid! Try again.")
+        print("Sorry, Wrong Choice!! Try again.")
         continue
       else:
         break
@@ -39,7 +39,7 @@ def get_filters():
     while True:
       day = input("\nAny Particular Day?Please enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' for all records.\n").lower()
       if day not in ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all'):
-        print("Sorry, I didn't catch that. Try again.")
+        print("Sorry, Wrong Choice!! Try again.")
         continue
       else:
         break
@@ -189,9 +189,9 @@ def user_stats(df):
 def show_raw_data(df):
     """
     Asks if the user would like to see some lines of data from the filtered dataset.
-    Displays 5 rows, then prompts if they would like to see 5 more and so on.
+    Displays 10 rows, then prompts if they would like to see next 10 more and so on.
     """
-    show_rows = 5
+    show_rows = 10
     rows_start = 0
     rows_end = show_rows - 1
 
